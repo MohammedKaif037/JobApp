@@ -1,0 +1,12 @@
+<html>
+  <body>
+    
+  <ul>
+    {% for i in jobs %}
+     
+      <a href="{% url 'jobdetail' forloop.counter %}"><h1>{{i}}</h1></a>
+
+    {% endfor %}
+</ul>
+</body>
+</html>

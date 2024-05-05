@@ -1,0 +1,22 @@
+<h1>Hello World</h1>
+<h2>{{name}}</h2>
+<h3>{{description}}</h3>
+<h4>{{classvalue.a}}</h4>
+<h2>age:{{age}}</h2>
+{% if age < 25 %}
+<h3>You are less than 25</h3>
+{{age|add:'2'}}
+{% else %}
+<h3>You are more than 25</h3>
+{% endif %}
+{% for i in colors %}
+<h1>{{i}}</h1>
+{% endfor %}
+
+<h4>list length</h4>
+<h2>{{colors|length}}</h2>
+<h2>{{colors|length_is:"4"}}</h2>
+
+{% comment 'hjhghhk'%}
+tr57uui7tghjhj
+{% endcomment %}

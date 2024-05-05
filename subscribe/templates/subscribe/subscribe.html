@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Hello</h2>
+    <span style="color: red;">
+        {% if error_message %}
+        <h3>{{ error_message}}</h3>
+        {%endif%}
+    </span>
+    <form action="" method="post">
+        {% csrf_token %}
+        <!--rendering automatically-->
+        <!-- {{ form.as_p}}
+        <input type="submit" value="Subscribe"> -->
+         <!--rendering automatically end-->
+
+          <!--rendering manually-->
+          {% comment %}
+          <div class="subscribe">
+            {{form.first_name.errors}}
+            <label for=""> {{form.first_name.label}}</label>
+            {{ form.first_name}}  {{form.last_name.help_text}}
+          </div>
+          <div class="subscribe">
+            {{form.last_name.errors}}
+         
+            <label for="">{{form.last_name.label}}</label>  
+            {{form.last_name}}  {{form.last_name.help_text}}
+          </div>
+          <div class="subscribe">
+            {{form.email.errors}}
+            <label for=""> {{form.email.label}}</label>
+            {{form.email}}
+          </div>
+
+          <input type="submit" value="Submit">{% endcomment %}
+          <!--rendering manually end-->
+          <!--rendering using for loop-->
+          <div class="subscribe">
+          {% for field in form %}
+          {{ field.errors }}
+          {{ field.label_tag}}
+          {{ field }} <br>
+          {% endfor %}
+        </div>
+           <!--rendering using for loop end-->
+ <!--
+        <table align="center">
+            <tr>
+                <td>
+               <td><label for="">FirstName</label>               </td>
+                <td>
+                    <input type="text" name="fname" id="" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+               <td><label for="">LastName</label>               </td>
+                <td>
+                    <input type="text" name="lname" id="" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+               <td><label for="">Email</label>               </td>
+                <td>
+                    <input type="email" name="email" id="" required> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                 
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr> -->
+        <!-- </table> -->
+    </form>
+</body>
+</html>
