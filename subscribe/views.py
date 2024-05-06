@@ -21,13 +21,14 @@ def subscribe(request):
     if request.POST:
         subscribe_form=SubscribeForm(request.POST) # binding data to form creating instance with data coming from the form
         if subscribe_form.is_valid():
-            print('Valid form')
+            '''print('Valid form')
             print(subscribe_form.cleaned_data)
             first_name=subscribe_form.cleaned_data['first_name']
             last_name=subscribe_form.cleaned_data['last_name']
             email=subscribe_form.cleaned_data['email']
             subscribe=Subscribe(email=email, first_name=first_name, last_name=last_name,)
-            subscribe.save()
+            subscribe.save()'''
+            subscribe_form.save() # this happened because we now used model forms
             return redirect(reverse('thank_you'))
         # subscribe=Subscribe(last_name=lname,email=email,first_name=fname, )
         

@@ -1,6 +1,7 @@
 from django import forms
 
 from subscribe.models import Subscribe
+from django.utils.translation import gettext_lazy as _
 
 def check_comma(value):
     if ',' in value:
@@ -20,3 +21,6 @@ class SubscribeForm(forms.ModelForm):
     class Meta:
         model=Subscribe
         fields='__all__'
+        labels={'first_name':_('Enter First Name'), 'last_name':_('Enter Last Name'),'email':_('Enter Email')}
+        error_messages={'first_name':{'required':_('Enter First Name cannot be empty')}}
+        help_texts={'first_name':_('Enter Characters Only')}
