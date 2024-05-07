@@ -8,12 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 style="text-align: center;">Subscribe Form</h2>
-    <span style="color: red;">
-        {% if error_message %}
-        <h3>{{ error_message}}</h3>
-        {%endif%}
-    </span>
+    
+        
+        <h2><img style="height: 22px; width:50px;text-align: left;" src="{% static 'subscribe/email-icon.jpg' %}" alt="emailicon">Subscribe Form</h2>
+    
     <form action="" method="post">
         {% csrf_token %}
         {{form.as_p}}
