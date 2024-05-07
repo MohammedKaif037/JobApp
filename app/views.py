@@ -54,4 +54,4 @@ def jobdetail(request,id):
 def alljobs(request):
     jobs=JobPost.objects.all()
     context={'jobs':jobs}
-    return render(request, 'app/index2.html',context=context)
+    return render(request, 'app/index.html',context=context)

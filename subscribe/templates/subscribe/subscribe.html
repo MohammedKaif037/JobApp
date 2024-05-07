@@ -1,57 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'app/style.css' %}" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <title>Subscribe</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <div class="logo">
-            <img src="{% static 'app/logo.svg' %}" alt="" />
-          </div>
-          <div class="links">
-            <a href="{% url 'alljobs' %}" >Home</a>
-          </div>
-          <span class="material-icons menu" onclick="menu()"> menu </span>
-        </div>
-      </nav>
-    </header>
-    <section>
-      <div class="container">
-          <form class="email-form">
-            <p>
-              <label for="id_first_name">Enter First Name:</label>
-              <input type="text" name="first_name" maxlength="100" required id="id_first_name">
-            </p>
-            <p>
-              <label for="id_last_name">Enter Last Name:</label>
-              <input type="text" name="last_name" maxlength="100" required id="id_last_name">
-            </p>
-            <p>
-              <label for="id_email">Enter Email:</label>
-              <input type="email" name="email" maxlength="100" required id="id_email"> 
-            </p>
-            <p>
-              <label for="id_option">Option:</label>
-              <select name="option" id="id_option">
-            <option value="W">Weekly</option>
-            <option value="M" selected>Monthly</option>
-          </select>
-            </p>
-          <button class="email-submit">Submit</button>
-    </div>
-      </div>
-    </section>
-    <script src="{% static 'app/app.js' %}"></script>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}FlixCarrers | Subscribe{% endblock title %}
+
+{% block content %} 
+<section>
+  <div class="container">
+      <form class="email-form" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+      <button class="email-submit">Submit</button>
+      </form>
+</div>
+</section>
+{% endblock content %}

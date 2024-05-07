@@ -23,4 +23,4 @@ class SubscribeForm(forms.ModelForm):
         fields='__all__'
         labels={'first_name':_('Enter First Name'), 'last_name':_('Enter Last Name'),'email':_('Enter Email')}
         error_messages={'first_name':{'required':_('Enter First Name cannot be empty')}}
-        help_texts={'first_name':_('Enter Characters Only')}
+        # help_texts={'first_name':_('Enter Characters Only')}

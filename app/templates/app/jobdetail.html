@@ -1,3 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}FlixCarrers | {{data.title}}{% endblock title %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="view-post">
+      <h1 class="jobtitle">
+         {{ data.title }}
+      </h1>
+      <p class="location it">Location: <span> {{data.location.city}}</span></p>
+      <p class="status it">Type: <span> {{data.job_type}}</span></p>
+      <p class="budget it">Salary: <span> {{data.salary}}</span></p>
+      <div class="desc">
+        <p class="details">
+           {{data.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
+ 
 {% load static  %}
 <!DOCTYPE html>
 <html lang="en">
@@ -26,23 +49,6 @@
         </div>
       </nav>
     </header>
-    <section>
-      <div class="container">
-        <div class="view-post">
-          <h1 class="jobtitle">
-             {{ data.title }}
-          </h1>
-          <p class="location it">Location: <span> {{data.location.city}}</span></p>
-          <p class="status it">Type: <span> {{data.job_type}}</span></p>
-          <p class="budget it">Salary: <span> {{data.salary}}</span></p>
-          <div class="desc">
-            <p class="details">
-               {{data.description}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
     <script src="{% static 'app/app.js'%}"></script>
   </body>
 </html>
