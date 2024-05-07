@@ -89,7 +89,7 @@ Start the server
 
 ## Usage/Examples
 
-```javascript
+```bash
     -Creating your own URLs and views to serve user requests from the browser
     -Using the Django Template Language to create dynamic templates
     -Learning filters in the Django template language
