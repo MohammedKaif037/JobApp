@@ -19,9 +19,8 @@
 </form>
 <!--Showing that user has uploaded succesfullly-->
 {% if saved_object %}
-<h2>Upload Successful:{{saved_object.image.url}}</h2>
-<h2>Image Description:{{saved_object.description}}</h2>
-<img src="{{saved_object.image.url}}" alt="Image" style="max-height: 400px;">
+<h2>Upload Successful:{{saved_object.file.url}}</h2>
+<h2>File Description:{{saved_object.description}}</h2>
 {% endif  %}
 <!--Showing that user has uploaded succesfullly end-->
     
