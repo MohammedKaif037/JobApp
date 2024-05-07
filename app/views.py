@@ -3,20 +3,6 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from app.models import JobPost
-
-
-class TempClass:
-    a=99
-job_title=[
-    "First Job",
-    "Second Job",
-    "Third Job",
-]
-job_description=[
-    "This is the first job",
-    "This is the second job",
-    "This is the third job",
-]
 # Create your views here.
 def hello(request):
     tempobj=TempClass()
