@@ -6,8 +6,8 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --blue: #4d62d8;
-  --lblue: #7281e0;
+  --purple: #7e53c1;
+  --lpurple: #a08be5;
   --card: #fdfdfd;
   --shadow: #64646f17 0px 12px 29px 0px;
   --nav: #1b2436;
@@ -65,7 +65,7 @@ img {
   padding: 0 20px;
   font-size: 1rem;
   font-weight: 500;
-  background: var(--blue);
+  background: var(--purple);
   color: white;
   box-shadow: var(--shadow);
 }
@@ -92,7 +92,7 @@ img {
   display: grid;
   align-items: center;
   grid-template-columns: 8fr 2fr;
-  border-bottom: 3px solid var(--lblue);
+  border-bottom: 3px solid var(--lpurple);
 }
 .menu {
   display: none !important;
@@ -130,7 +130,7 @@ img {
   color: gray;
 }
 .apply {
-  background: var(--blue);
+  background: var(--purple);
   height: 45px;
   padding: 0 40px;
   color: white;
@@ -138,15 +138,15 @@ img {
   font-weight: 500;
 }
 .view {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--purple);
   background: transparent;
-  color: var(--blue);
+  color: var(--purple);
 }
 .job-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--blue);
+  color: var(--purple);
 }
 
 
@@ -173,7 +173,7 @@ img {
   background: #80808017;
 }
 .desc::-webkit-scrollbar-thumb {
-  background: #4d62d8;
+  background: #7e53c1;
 }
 .jobtitle {
   font-size: 1.5rem;
@@ -184,7 +184,7 @@ img {
 .it {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--lblue);
+  color: var(--lpurple);
 }
 .it span {
   color: #1b2436c0;
@@ -268,88 +268,72 @@ img {
 
 button{
   cursor: pointer;
-  }
+}
 
 
-  /* Email code */
-  .subscribe-text{
+/* Email code */
+.subscribe-text{
   border: none;
   outline: none;
   height: 45px;
-  padding: 0 15px;
+  padding
+
+: 0 15px;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 400;
   width: 100%;
-  }
+}
 
-  /* .email-form{
-    grid-template-columns: 1fr;
-    padding: 1em;
-    margin-top: 15vh;
-    display: grid;
-    gap: 2em;
-    background-color: var(--blue);
-    padding: 2em;
-    border-radius: 8px;
-    margin-top: 3em;
-    width: 50%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) 
-  } */
+.email-form-title{
+  color: #f5f6f5;
+  font-size: 300%;
+  text-align: center;
+}
 
-  .email-form-title{
-    color: #f5f6f5;
-    font-size: 300%;
-    text-align: center;
-  }
+.email-form-title-success{
+  color: yellow;
+  font-size: 300%;
+  text-align: center;
+  display: none;
+}
 
-  .email-form-title-success{
-    color: yellow;
-    font-size: 300%;
-    text-align: center;
-    display: none;
-  }
+.help-text{
+  font-size: 10px;
+  color: gray;
+  padding: 0;
+  margin: 0;
+}
 
-  .help-text{
-    font-size: 10px;
-    color: gray;
-    padding: 0;
-    margin: 0;
-  }
+.email-submit{
+  border: none;
+  outline: none;
+  height: 45px;
+  background: var(--purple);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  padding: 0 3em;
+  
+}
 
-  .email-submit{
-    border: none;
-    outline: none;
-    height: 45px;
-    background: var(--blue);
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    color: white;
-    padding: 0 3em;
-    
-  }
-
-  label {
-    color: var(--lblue);
-    font-weight: 500;
-    padding-bottom: 10px;
+label {
+  color: var(--lpurple);
+  font-weight: 500;
+  padding-bottom: 10px;
 }
 
 input, select {
-border: none;
-outline: none;
-height: 45px;
-border-radius: 3px;
-width: 100%;
-background: #7281e02a;
-padding: 0 20px;
-margin-bottom: 2em;
+  border: none;
+  outline: none;
+  height: 45px;
+  border-radius: 3px;
+  width: 100%;
+  background: #a08be52a;
+  padding: 0 20px;
+  margin-bottom: 2em;
 }
 
 form {
