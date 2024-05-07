@@ -23,5 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # path("",hello)
     path("",include('app.urls')),
-    path("",include('subscribe.urls'))
+    path("",include('subscribe.urls')),
+    path("uploads/",include('uploadapp.urls')),
 ]
