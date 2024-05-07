@@ -18,8 +18,15 @@ class location(models.Model):
     zip=models.CharField(max_length=100)
 # Create your models here.
 class JobPost(models.Model):
+    JOB_TYPE_CHOICES=[
+        ('Full Time','Full Time'),
+        ('Part Time','Part Time'),
+        ('Contract','Contract'),
+        ('Internship','Internship'),
+        ('Freelance','Freelance'),
+    ]
     title=models.CharField(max_length=50)
-    description=models.CharField(max_length=200)
+    description=models.TextField()
     date=models.DateTimeField(auto_now_add=True)
     expiry=models.DateField(null=True)
     salary=models.IntegerField() 
@@ -27,6 +34,7 @@ class JobPost(models.Model):
     location=models.OneToOneField(location,on_delete=models.CASCADE, null=True)
     author=models.ForeignKey(author,null=True,on_delete=models.CASCADE)
     skills=models.ManyToManyField(skills,)
+    job_type=models.CharField(max_length=200,null=False,choices=JOB_TYPE_CHOICES)
 
     def save(self,*args,**kwargs):
         if not self.id:
