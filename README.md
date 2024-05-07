@@ -103,7 +103,9 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]( https://github.com/MohammedKaif037/JobApp/blob/main/screenshots/Screenshot%202024-05-08%20at%2003-01-34%20Employment%20Edge%20Home.png)
+![App Screenshot]( https://github.com/MohammedKaif037/JobApp/blob/main/screenshots/Screenshot%202024-05-08%20at%2003-01-34%20Employment%20Edge%20Home.png)
+
 
 
 ## Authors
