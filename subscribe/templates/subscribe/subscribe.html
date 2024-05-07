@@ -1,14 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        h2{
-            text-align: center;
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'subscribe/main.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -22,15 +18,12 @@
         {% csrf_token %}
         {{form.as_p}}
         
-          <input type="submit" value="Submit">
-        </div>
+          <input type="submit" value="Submit"> <br>
         <button onclick="popup()">Click  Me</button>
            
     </form>
-    <script>
-        function popup() {
-            alert("Hello World");
-        }
+    <script src="{% static 'subscribe/main.js'  %}">
+        
     </script>
 </body>
 </html>
