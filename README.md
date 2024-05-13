@@ -3,6 +3,14 @@
 
 This repository contains a Django-based job portal project created while learning Django. It includes views, templates, and course content related to building a job portal website using Django.
 
+## Badges
+[![HTML](https://img.shields.io/badge/HTML-5-red)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-4-purple)](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+[![Django](https://img.shields.io/badge/Django-3.0-green)](https://docs.djangoproject.com/en/3.0/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![SQLite](https://img.shields.io/badge/SQLite-3-blue)](https://www.sqlite.org/docs.html)
+
 ## Tech Stack
 
 Django 
